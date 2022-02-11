@@ -38,7 +38,7 @@
   transition: 0.5s all;
   .menu__block {
     position: relative;
-    padding: 140px 0px 50px;
+    padding: 140px 0px 0px;
     width: 350px;
     height: 100vh;
     background-color: $main-color;
@@ -47,21 +47,51 @@
   &__ul {
     padding-left: 50px;
     list-style-type: none;
-    ::before {
-      content: "\2B58";
-      margin-right: 15px;
-      animation: circle 3s linear infinite;
-    }
+    
   }
   &__li {
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
     color: #ffffff;
+    &::before {
+      content: "\2B58";
+      margin-right: 15px;
+      animation: circle 3s linear infinite;
+    }
   }
   &__exit {
     position: absolute;
     top: 25px;
     right: 25px;
   }
+  &__descr {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    a {
+      text-decoration-line: none;
+      svg {
+        height: 35px;
+        width: 35px;
+        path {
+          fill: whitesmoke;
+        }
+      }
+      & + a {
+        margin-left: 5px;
+      }
+      &:hover {
+        svg {
+          path {
+            fill: black;
+          }
+        }
+      }
+    }
+  }
 }
+// list-style-type: none;
+// cursor: pointer;

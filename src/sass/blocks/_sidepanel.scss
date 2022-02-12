@@ -18,14 +18,22 @@
     svg {
       height: 25px;
       width: 25px;
-      path:hover {
-        fill: $main-color;
+      path {
+        transition: 0.1s all;
+      }
+    }
+    &:nth-child(2) {
+      transform: rotate(0deg);
+    }
+    &:hover {
+      svg {
+        path {
+          fill: $main-color;
+        }
       }
     }
   }
-  a:nth-child(2) {
-    transform: rotate(0deg);
-  }
+
   &__line {
     width: 2px;
     height: 70px;

@@ -28,14 +28,20 @@
 .menu {
   position: fixed;
   top: 0;
-  // left: -10%;/////////////////////////////////////
+  left: -100%; /////////////////////////////////////
   height: 100vh;
   width: 100%;
-  // visibility: hidden;//////////////////////////////////
-  // opacity: 0;//////////////////////////////
+  visibility: hidden; //////////////////////////////////
+  opacity: 0; //////////////////////////////
 
   z-index: 5;
   transition: 0.5s all;
+
+  &.active {
+    left: 0; /////////////////////////////////////
+    visibility: visible; //////////////////////////////////
+    opacity: 1; //////////////////////////////
+  }
   .menu__block {
     position: relative;
     padding: 140px 0px 0px;
@@ -43,27 +49,53 @@
     height: 100vh;
     background-color: $main-color;
     transition: 0.5s all;
+    z-index: 10;
   }
   &__ul {
     padding-left: 50px;
     list-style-type: none;
-    
   }
   &__li {
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
     color: #ffffff;
+    text-shadow: 1px 3px 1px black;
+    cursor: pointer;
+    transition: 0.5s all;
+    &:hover {
+      margin-left: 15px;
+    }
     &::before {
       content: "\2B58";
       margin-right: 15px;
       animation: circle 3s linear infinite;
     }
   }
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 75%;
+    // z-index: 10;
+  }
   &__exit {
     position: absolute;
     top: 25px;
     right: 25px;
+    // z-index: 10;
+    cursor: pointer;
+    &:hover {
+      svg {
+        path {
+          transition: 0.5s all;
+          fill: white;
+        }
+      }
+    }
   }
   &__descr {
     position: absolute;
@@ -77,6 +109,7 @@
         height: 35px;
         width: 35px;
         path {
+          transition: 0.5s all;
           fill: whitesmoke;
         }
       }

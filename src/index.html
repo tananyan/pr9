@@ -50,6 +50,7 @@
 </head>
 
 <body>
+  <!-- Боковая панель -->
   <aside class="sidepanel">
     <a href="#">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +89,7 @@
     <div class="sidepanel__line"></div>
     <div class="sidepanel__descr title title_fz16">Социальные сети</div>
   </aside>
-
+  <!-- Меню -->
   <div class="menu">
     <div class="menu__block">
       <nav>
@@ -148,9 +149,9 @@
       </div>
     </div>
 
-    <div class="menu-overlay"></div>
+    <div class="menu__overlay"></div>
   </div>
-
+  <!-- Топ -->
   <section class="promo">
     <div class="burger">
       <span></span>
@@ -168,7 +169,39 @@
   </section>
   <!-- /.promo -->
 
-  <script src="js/script.js"></script>
+  <!-- Про меня  -->
+  <section class="about-me">
+    <div class="container">
+      <div class="about-me__wrapper">
+        <div class="about-me__img"><img src="./img/main_photo.jpg" alt="main"></div>
+
+        <div class="about-me__main">
+          <div class="title title_fz16 about-me__subtitle">Про меня</div>
+          <h1 class="title title_fz36 about-me__title">Меня зовут Борис</h1>
+          <hr class="about-me__hr">
+          <div class="about-me__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, commodi tempora veritatis accusamus maiores praesentium ipsum error neque incidunt voluptate quam. Aliquid consequatur et earum eius aliquam modi, iure praesentium. Lorem ipsum dolor sit amet.</div>
+        </div>
+
+        <div class="about-me__skills">
+          <div class="about-me__skills__block">
+            <div class="title title_fz14 about-me__skills__subtitle">Web-разработка</div>
+            <div class="about-me__skills__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eveniet nisi ipsum nemo debitis sapiente.</div>
+          </div>
+          <div class="about-me__skills__block">
+            <div class="title title_fz14 about-me__skills__subtitle">UI/UX Design</div>
+            <div class="about-me__skills__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, incidunt?</div>
+          </div>
+          <div class="about-me__skills__block">
+            <div class="title title_fz14 about-me__skills__subtitle">Разработка приложений</div>
+            <div class="about-me__skills__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nam sint vitae pariatur assumenda error.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.about-m -->
+
+  <script src="./js/scripts.js"></script>
 </body>
 
 </html>

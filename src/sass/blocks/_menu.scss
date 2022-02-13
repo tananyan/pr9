@@ -60,11 +60,12 @@
     font-size: 24px;
     line-height: 36px;
     color: #ffffff;
-    text-shadow: 1px 3px 1px black;
+    text-shadow: 1px 3px 5px black;
     cursor: pointer;
     transition: 0.5s all;
     &:hover {
       margin-left: 15px;
+      text-shadow: -15px 5px 5px black;
     }
     &::before {
       content: "\2B58";

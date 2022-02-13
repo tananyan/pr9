@@ -11,3 +11,17 @@
     left: 0;
   }
 }
+
+@mixin before_circle_15px {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: $main-color;
+    z-index: -1;
+    top: -25%;
+    left: 0;
+  }
+}

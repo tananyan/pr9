@@ -1,4 +1,66 @@
 .my-resume {
   min-height: 805px;
   padding: 120px 0;
+
+  &__top-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__subtitle {
+    position: relative;
+    @include before_circle;
+    &:before {
+      left: 3px;
+    }
+  }
+  &__title {
+    margin-top: 5px;
+  }
+  &__div-hr {
+    width: 60px;
+    height: 3px;
+    background-color: $main-color;
+    margin-top: 25px;
+  }
+
+  &__bottom-block {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 425px);
+    grid-template-rows: minmax(378px, auto);
+    column-gap: 135px;
+    justify-content: center;
+  }
+  &__bb-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px repeat(2, minmax(129px, auto));
+    row-gap: 45px;
+  }
+  &__bb-wrapper-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px minmax(115px, auto);
+    row-gap: 15px;
+  }
+  &__bb-header {
+    display: flex;
+    align-items: center;
+  }
+  &__bb-img-wrapper {
+    height: 45px;
+    width: 45px;
+    justify-content: center;
+    position: relative;
+    padding-left: 15px;
+    padding-top: 15px;
+    @include before_circle;
+    &:before {
+      top: 0;
+    }
+  }
+  &__bb-titles {
+    margin-left: 15px;
+  }
 }

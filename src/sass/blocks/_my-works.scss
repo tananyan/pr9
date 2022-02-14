@@ -1,0 +1,26 @@
+.my-works {
+  padding-top: 120px;
+  padding-bottom: 120px; ///
+  &__top-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__subtitle {
+    position: relative;
+    @include before_circle;
+    &:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__title {
+    margin-top: 5px;
+  }
+  &__div-hr {
+    width: 60px;
+    height: 3px;
+    background-color: $main-color;
+    margin-top: 25px;
+  }
+}

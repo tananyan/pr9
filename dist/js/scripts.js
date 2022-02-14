@@ -14,3 +14,10 @@ overl.addEventListener("click", () => {
   menu.classList.remove("active");
 });
 
+// Линия с процентам и
+const counters = document.querySelectorAll(".skills__footer-count"),
+  linesSpan = document.querySelectorAll(".skills__footer-line span");
+
+counters.forEach((item, index) => {
+  linesSpan[index].style.width = item.innerHTML;
+});

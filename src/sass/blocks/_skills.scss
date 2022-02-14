@@ -1,0 +1,71 @@
+.skills {
+  min-height: 1024px;
+  padding-top: 120px;
+  &__top-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__subtitle {
+    position: relative;
+    @include before_circle;
+    &:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__title {
+    margin-top: 5px;
+  }
+  &__div-hr {
+    width: 60px;
+    height: 3px;
+    background-color: $main-color;
+    margin-top: 25px;
+  }
+
+  &__bottom-block {
+    margin-top: 55px;
+    padding: 0px 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(270px, auto));
+    grid-auto-rows: minmax(270px, auto);
+    column-gap: 13px;
+    row-gap: 13px;
+  }
+  &__bb-element {
+    position: relative;
+    padding: 30px;
+    padding-bottom: 25px;
+    border: solid 1px black;
+    box-shadow: 0px 0px 5px 1px $font-color;
+    background-color: white;
+    transition: 0.3s all;
+    z-index: 2;
+    &:hover{
+      transform: scale(1.025);
+      border: solid 1px $main-color;
+      box-shadow: 0px 0px 15px 5px $main-color;
+      z-index: 3;
+    }
+    img {
+      height: 65px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+  &__bb-el-name {
+    margin-top: 20px;
+    align-self: baseline;
+    cursor: default;
+  }
+  &__bb-el-text {
+    cursor: default;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $font-color;
+  }
+}

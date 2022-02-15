@@ -74,6 +74,7 @@
     display: grid;
     grid-template-columns: repeat(3, 350px);
     grid-template-rows: repeat(2, minmax(65px, auto));
+    grid-auto-rows: minmax(65px, auto); ///
     justify-content: space-between;
     row-gap: 35px;
     &-item {

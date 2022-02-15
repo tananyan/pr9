@@ -11,6 +11,9 @@ gulp.task("server", function () {
   browserSync({
     server: {
       baseDir: "dist",
+      // Для многостраничных сайтов ///
+      // serveStaticOptions: {
+      //   extensions: ["html"],},
     },
   });
 

@@ -6,6 +6,11 @@ const autoprefixer = require("gulp-autoprefixer");
 const rename = require("gulp-rename");
 const image = require("gulp-image");
 const htmlmin = require("gulp-htmlmin");
+/// Для webp конвертации
+// const webphtml = require("gulp-webp-html-nosvg");
+// const cwebp = require("gulp-cwebp");
+// "gulp-cwebp": "^4.0.2"
+// "gulp-webp-html-nosvg": "^1.0.5"
 
 gulp.task("server", function () {
   browserSync({
@@ -38,11 +43,13 @@ gulp.task("watch", function () {
   gulp.watch("src/fonts/**/*").on("all", gulp.parallel("fonts"));
   gulp.watch("src/icons/**/*").on("all", gulp.parallel("icons"));
   gulp.watch("src/img/**/*").on("all", gulp.parallel("images"));
+  // gulp.watch("src/img/**/*").on("all", gulp.parallel("cwebp"));
 });
 
 gulp.task("html", function () {
   return gulp
     .src("src/*.html")
+    // .pipe(webphtml()) ///
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("dist/"));
 });
@@ -64,6 +71,7 @@ gulp.task("fonts", function () {
 gulp.task("icons", function () {
   return gulp
     .src("src/icons/**/*")
+    .pipe(image())  ///
     .pipe(gulp.dest("dist/icons"))
     .pipe(browserSync.stream());
 });
@@ -76,6 +84,14 @@ gulp.task("images", function () {
     .pipe(browserSync.stream());
 });
 
+// gulp.task("cwebp", function () {
+//   return gulp
+//     .src("src/img/**/*")
+//     .pipe(cwebp())
+//     .pipe(gulp.dest("dist/img"))
+//     .pipe(browserSync.stream());
+// });
+
 gulp.task(
   "default",
   gulp.parallel(
@@ -87,5 +103,6 @@ gulp.task(
     "icons",
     "html",
     "images"
+    // "cwebp"А
   )
 );

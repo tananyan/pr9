@@ -33,9 +33,7 @@
   }
   &__item {
     display: grid;
-    grid-template: minmax(21px, auto) minmax(18px, auto) / 2fr 1fr;
-    justify-content: space-between;
-    align-content: space-between;
+    grid-template: repeat(2, minmax(21px, auto)) / repeat(2, auto);
     row-gap: 8px;
   }
   &__item-title {
@@ -44,6 +42,9 @@
     &:before {
       transform: translate(-25px, 8px);
     }
+  }
+  &__item-cost {
+    justify-self: right;
   }
   &__item-text {
     cursor: default;

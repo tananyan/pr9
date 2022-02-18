@@ -79,12 +79,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-    .name,
-    .e-mail {
-      position: relative;
-    }
   }
-  .message {
+  &__name,
+  &__e-mail,
+  &__message {
     position: relative;
   }
   input {
@@ -100,5 +98,20 @@
   }
   label {
     @include form-input;
+  }
+  &__form-bottom {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    column-gap: 35px;
+  }
+  &__policy {
+    font-size: 12px;
+    line-height: 18px;
+    align-self: center;
+    input {
+      width: 11px;
+      height: 11px;
+    }
   }
 }

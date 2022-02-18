@@ -26,11 +26,13 @@
   }
 }
 
-@mixin before_form {
+@mixin form-input {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   position: absolute;
+  top: 0;
+  left: 0;
   transform: translate(20px, -9px);
   background: white;
   border-left: 8px solid #fff;

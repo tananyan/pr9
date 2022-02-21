@@ -17,7 +17,6 @@ overl.addEventListener("click", () => {
 menuLink.forEach((item) => {
   item.addEventListener("click", () => {
     menu.classList.remove("active");
-    // menu.classList.toggle("active");
   });
 });
 
@@ -76,7 +75,7 @@ formValidation("#contact-form");
 
 // Скроллинг вверх и вниз
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 1500) {
+  if ($(this).scrollTop() > 2700) {
     $(".scroll-up").fadeIn("fast");
     $(".scroll-down").fadeOut("fast");
   } else {

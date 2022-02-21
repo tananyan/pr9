@@ -11,11 +11,9 @@
       width: 100%;
     }
   }
-  &-up {
-    animation: arrow-up 2s ease-in-out infinite;
-  }
-  
+  &-up,
   &-down {
-    animation: arrow-up 2s ease-in-out infinite;
+    display: none; 
+    animation: arrow 2s ease-in-out infinite;
   }
 }

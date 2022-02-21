@@ -10,25 +10,25 @@
   }
 }
 
-@keyframes arrow-up {
+@keyframes arrow {
   from {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(25px);
   }
   to {
     transform: translateY(0px);
   }
 }
-@keyframes arrow-do {
-  from {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
+// @keyframes arrow-do {
+//   from {
+//     transform: translateY(0);
+//   }
+//   50% {
+//     transform: translateY(25px);
+//   }
+//   to {
+//     transform: translateY(0px);
+//   }
+// }

@@ -1,0 +1,21 @@
+.scroll {
+  position: fixed;
+  top: 80vh;
+  right: 5px;
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration-line: none;
+    img {
+      height: 80px;
+      width: 100%;
+    }
+  }
+  &-up {
+    animation: arrow-up 2s ease-in-out infinite;
+  }
+  
+  &-down {
+    animation: arrow-up 2s ease-in-out infinite;
+  }
+}

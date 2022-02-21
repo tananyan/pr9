@@ -1,5 +1,6 @@
 const burger = document.querySelector(".burger"),
   menu = document.querySelector(".menu"),
+  menuLink = document.querySelectorAll(".menu__ul"),
   exit = document.querySelector(".menu__exit"),
   overl = document.querySelector(".menu__overlay");
 
@@ -12,6 +13,12 @@ exit.addEventListener("click", () => {
 });
 overl.addEventListener("click", () => {
   menu.classList.remove("active");
+});
+menuLink.forEach((item) => {
+  item.addEventListener("click", () => {
+    menu.classList.remove("active");
+    // menu.classList.toggle("active");
+  });
 });
 
 // Линия с процентам и
@@ -66,3 +73,14 @@ function formValidation(form) {
   });
 }
 formValidation("#contact-form");
+
+// Скроллинг вверх и вниз
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 1500) {
+    $(".scroll-up").fadeIn("fast");
+    $(".scroll-down").fadeOut("fast");
+  } else {
+    $(".scroll-up").fadeOut("fast");
+    $(".scroll-down").fadeIn("fast");
+  }
+});

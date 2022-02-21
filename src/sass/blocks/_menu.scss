@@ -54,6 +54,10 @@
   &__ul {
     padding-left: 50px;
     list-style-type: none;
+    a{
+      text-decoration-line: none;
+      color: #ffffff;
+    }
   }
   &__li {
     font-weight: 700;

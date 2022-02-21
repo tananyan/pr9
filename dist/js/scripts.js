@@ -21,3 +21,48 @@ const counters = document.querySelectorAll(".skills__footer-count"),
 counters.forEach((item, index) => {
   linesSpan[index].style.width = item.innerHTML;
 });
+
+// Валидация формы
+function formValidation(form) {
+  $(form).validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2,
+        maxlength: 25,
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      text: {
+        required: true,
+        minlength: 5,
+        maxlength: 800,
+      },
+      policy: {
+        required: true,
+      },
+    },
+    messages: {
+      name: {
+        required: "Пожалуйста, введите ваше имя",
+        minlength: jQuery.validator.format("Минимальная длина {0} букв"),
+        maxlength: jQuery.validator.format("Максимальная длина {0} букв"),
+      },
+      email: {
+        required: "Пожалуйста, введите e-mail",
+        email: "Пример почты name@pochta.ru",
+      },
+      text: {
+        required: "Пожалуйста, введите сообщение",
+        minlength: jQuery.validator.format("Минимальная длина {0} символов"),
+        maxlength: jQuery.validator.format("Максимальная длина {0} символов"),
+      },
+      policy: {
+        required: "Это обязательное условие",
+      },
+    },
+  });
+}
+formValidation("#contact-form");

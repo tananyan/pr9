@@ -586,29 +586,29 @@
           <div class="title title_fz14 contact__title">Или оставьте ваши данные и я сама вам напишу:</div>
 
           <!-- form -->
-          <form action="#" class="contact__form">
+          <form action="#" id="contact-form" class="contact__form">
             <!-- head -->
             <div class="contact__form_top">
-              <div class="contact__name">
-                <input type="text" required name="name" id="name">
-                <label for="name">Ваше Имя</label>
+              <div class="contact__name" >
+                <input type="text" name="name" id="name" maxlength="30">
+                <label class="contact__form-label" for="name">Ваше Имя</label>
               </div>
               <div class="contact__e-mail">
-                <input type="email" required name="email" id="email">
-                <label for="email">Ваша Почта</label>
+                <input type="email" name="email" id="email" maxlength="30">
+                <label class="contact__form-label" for="email">Ваша Почта</label>
               </div>
             </div>
             <!-- text -->
             <div class="contact__message">
-              <textarea name="text" id="text"></textarea>
-              <label for="text">Ваша Почта</label>
+              <textarea name="text" id="text" maxlength="800"></textarea>
+              <label class="contact__form-label" for="text">Сообщение</label>
             </div>
             <!-- send -->
             <div class="contact__form-bottom">
               <button class="title title_fz14 btn_submit ">Отправить сообщение</button>
               <div class="contact__policy">
-                <input type="checkbox" required name="policy" id="policy">
-                <span> Я согласен(а) с <a href="#">политикой конфиденциальности</a></span>
+                <input type="checkbox" name="policy" id="policy" >
+                <span> Я согласен(а) с <a href="./policy.html" target="_blank">политикой конфиденциальности</a></span>
               </div>
             </div>
           </form>
@@ -617,6 +617,12 @@
     </div>
   </section>
   <!-- /.contact -->
+
+
+  <!-- Script  -->
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="./js/scripts.js"></script>
 </body>
 

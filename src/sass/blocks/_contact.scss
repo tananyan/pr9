@@ -99,6 +99,13 @@
   label {
     @include form-input;
   }
+  #name-error,
+  #email-error,
+  #text-error {
+    color: red;
+    z-index: 2;
+  }
+
   &__form-bottom {
     display: grid;
     grid-template-columns: auto auto;
@@ -106,12 +113,17 @@
     column-gap: 35px;
   }
   &__policy {
+    position: relative;
     font-size: 12px;
     line-height: 18px;
     align-self: center;
     input {
       width: 11px;
       height: 11px;
+    }
+    #policy-error {
+      transform: translate(5px, 15px);
+      color: red;
     }
   }
 }

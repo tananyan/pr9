@@ -1,0 +1,112 @@
+// Адаптив
+
+@media (max-width: 1300px) {
+  .sidepanel {
+    display: none;
+  }
+}
+
+//992px-1200px
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+//768px-991px
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .title {
+    &_fz48 {
+      font-size: 48px;
+    }
+  }
+
+  .menu {
+    &__descr {
+      a {
+        &:hover {
+          svg {
+            path {
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .promo {
+    &__title {
+      width: 300px;
+      line-height: 38px;
+    }
+  }
+}
+
+//576px-767px
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .title {
+    &_fz48 {
+      font-size: 30px;
+    }
+  }
+}
+
+//320px-576px
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .burger {
+    top: 25px;
+    right: 15px;
+  }
+
+  .menu {
+    .menu__block {
+      width: 250px;
+    }
+    &__ul {
+      padding-left: 20px;
+    }
+    &__descr {
+      a {
+        svg {
+          height: 21px;
+          width: 21px;
+        }
+        & + a {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .title {
+    &_fz48 {
+      font-size: 26px;
+    }
+  }
+
+  .promo {
+    background-position-x: 57%;
+    // 50% / cover;
+    &__title {
+      width: 270px;
+      line-height: 38px;
+    }
+    &__btns {
+      margin-top: 32px;
+    }
+  }
+}

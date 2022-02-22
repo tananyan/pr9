@@ -14,6 +14,8 @@
     grid-row: 1/3;
     img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -42,6 +44,7 @@
     font-size: 14px;
     line-height: 21px;
     color: $font-color;
+    text-align: justify;
   }
 
   // 3
@@ -73,6 +76,7 @@
       font-size: 12px;
       line-height: 18px;
       color: $font-color;
+      text-align: justify;
     }
   }
 }

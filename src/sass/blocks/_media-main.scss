@@ -36,6 +36,11 @@
       column-gap: 100px;
     }
   }
+  .skills {
+    &__footer {
+      grid-template-columns: repeat(3, 300px);
+    }
+  }
 }
 
 //769px-992px
@@ -43,13 +48,11 @@
   .container {
     max-width: 720px;
   }
-
   .title {
     &_fz48 {
       font-size: 38px;
     }
   }
-
   .menu {
     &__descr {
       a {
@@ -93,7 +96,20 @@
     &__bottom-block {
       grid-template-columns: repeat(2, 300px);
       column-gap: 70px;
-      justify-content: end;
+      margin-left: 50px;
+    }
+  }
+  .skills {
+    &__bottom-block {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, minmax(270px, auto));
+    }
+    &__footer {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 15px;
+      &-item {
+        grid-template: minmax(21px, auto) 14px / 5fr 1fr;
+      }
     }
   }
 }
@@ -103,12 +119,10 @@
   .container {
     max-width: 540px;
   }
-
   .burger {
     top: 25px;
     right: 25px;
   }
-
   .title {
     &_fz48 {
       font-size: 30px;
@@ -122,13 +136,28 @@
     padding-top: 50px;
     &__bottom-block {
       grid-template-columns: 500px;
-      // grid-template-rows: repeat(2, minmax(300px, auto));
-      grid-template-rows: 30px repeat(2, minmax(300px, auto));
+      grid-template-rows: repeat(2, minmax(300px, auto));
       grid-auto-rows: minmax(300px, auto);
       row-gap: 75px;
     }
     &__bb-wrapper {
       position: relative;
+    }
+  }
+  .skills {
+    padding-top: 50px;
+    &__title {
+      margin-top: 15px;
+      line-height: 36px;
+      text-align: center;
+    }
+    &__bottom-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__footer {
+      margin-top: 50px;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 15px;
     }
   }
 }
@@ -139,12 +168,10 @@
     max-width: 100%;
     padding: 0 10px;
   }
-
   .burger {
     top: 25px;
     right: 15px;
   }
-
   .menu {
     .menu__block {
       width: 250px;
@@ -164,7 +191,6 @@
       }
     }
   }
-
   .title {
     &_fz48 {
       font-size: 26px;
@@ -206,6 +232,15 @@
     &__bottom-block {
       grid-template-columns: 270px;
       row-gap: 50px;
+    }
+  }
+  .skills {
+    &__bottom-block {
+      grid-template-columns: 1fr;
+    }
+    &__footer {
+      margin-top: 50px;
+      grid-template-columns: 1fr;
     }
   }
 }

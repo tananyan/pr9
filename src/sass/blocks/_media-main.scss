@@ -30,6 +30,12 @@
       }
     }
   }
+  .my-resume {
+    &__bottom-block {
+      grid-template-columns: repeat(2, 390px);
+      column-gap: 100px;
+    }
+  }
 }
 
 //769px-992px
@@ -83,6 +89,13 @@
       }
     }
   }
+  .my-resume {
+    &__bottom-block {
+      grid-template-columns: repeat(2, 300px);
+      column-gap: 70px;
+      justify-content: end;
+    }
+  }
 }
 
 //577px-768px
@@ -104,6 +117,19 @@
 
   .about-me {
     padding-top: 50px;
+  }
+  .my-resume {
+    padding-top: 50px;
+    &__bottom-block {
+      grid-template-columns: 500px;
+      // grid-template-rows: repeat(2, minmax(300px, auto));
+      grid-template-rows: 30px repeat(2, minmax(300px, auto));
+      grid-auto-rows: minmax(300px, auto);
+      row-gap: 75px;
+    }
+    &__bb-wrapper {
+      position: relative;
+    }
   }
 }
 
@@ -154,9 +180,7 @@
       margin-top: 32px;
     }
   }
-
   .about-me {
-    padding-top: 50px;
     &__wrapper {
       grid-template-rows: 340px repeat(2, minmax(250px, auto));
       grid-template-columns: 1fr;
@@ -176,6 +200,12 @@
       &__block {
         column-gap: 15px;
       }
+    }
+  }
+  .my-resume {
+    &__bottom-block {
+      grid-template-columns: 270px;
+      row-gap: 50px;
     }
   }
 }

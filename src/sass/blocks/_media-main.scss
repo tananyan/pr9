@@ -48,6 +48,19 @@
       grid-auto-rows: 240px;
     }
   }
+  .contact {
+    &__wrapper {
+      grid-template-columns: 360px 1fr;
+      column-gap: 30px;
+    }
+    &__img {
+      height: 600px;
+    }
+    // buttob
+    &__form-bottom {
+      grid-template-columns: minmax(200px, auto) auto;
+    }
+  }
 }
 
 //769px-992px
@@ -130,6 +143,25 @@
       }
     }
   }
+  .price {
+    &__bottom-block {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 58px;
+      padding-left: 25px;
+      padding-right: 0px;
+    }
+  }
+  .contact {
+    &__wrapper {
+      grid-template-columns: 260px 1fr;
+      column-gap: 15px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__form-bottom {
+      grid-column: 15px;
+    }
+  }
 }
 
 //577px-768px
@@ -189,8 +221,39 @@
       }
     }
   }
-
-  // padding-top: 50px;
+  .price {
+    padding-top: 50px;
+    &__bottom-block {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      row-gap: 15px;
+    }
+  }
+  .contact {
+    padding-top: 50px;
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+    &__img {
+      display: none;
+    }
+    .title {
+      text-align: center;
+    }
+    &__subtitle {
+      padding-left: 0;
+      &::before {
+        left: 50%;
+        transform: translateX(-51%);
+      }
+    }
+    &__div-hr {
+      margin: auto;
+    }
+    &__links {
+      text-align: center;
+    }
+  }
 }
 
 //320px-576px
@@ -250,6 +313,7 @@
     }
     &__skills {
       grid-row: 3/4;
+      justify-content: center;
       grid-template-rows: repeat(3, minmax(100px, auto));
       grid-auto-rows: minmax(115px, auto);
       grid-template-columns: 260px;
@@ -291,6 +355,34 @@
       #horizonal {
         grid-column: span 1;
       }
+    }
+  }
+  .price {
+    &__bottom-block {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+    }
+  }
+  .contact {
+    min-height: 750px;
+    padding-bottom: 50px;
+    &__form {
+      max-height: 355px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 115px 1fr 45px;
+      row-gap: 25px;
+    }
+    &__form_top {
+      grid-template-columns: 1fr;
+      grid-template-rows: 45px 45px;
+      row-gap: 25px;
+    }
+    &__form-bottom {
+      grid-template-columns: 250px;
+      grid-template-rows: 36px 45px;
+      justify-content: center;
+      row-gap: 20px;
+      text-align: center;
     }
   }
 }

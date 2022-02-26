@@ -83,3 +83,22 @@ $(window).scroll(function () {
     $(".scroll-down").fadeIn("fast");
   }
 });
+
+// Почта mailer
+$("form").submit(function (e) {
+  e.preventDefault();
+  if (!$(this).valid()) {
+    return;
+  }
+  $.ajax({
+    type: "POST",
+    url: "mailer/smart.php",
+    data: $(this).serialize(),
+  }).done(function () {
+    $(this).find("input").val("");
+    $(".form-thanks").fadeIn("fast");
+
+    $("form").trigger("reset");
+  });
+  return false;
+});

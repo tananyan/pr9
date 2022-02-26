@@ -44,6 +44,7 @@ gulp.task("watch", function () {
   gulp.watch("src/icons/**/*").on("all", gulp.parallel("icons"));
   gulp.watch("src/img/**/*").on("all", gulp.parallel("images"));
   gulp.watch("src/img/**/*").on("all", gulp.parallel("cwebp"));
+  gulp.watch("src/mailer/**/*").on("all", gulp.parallel("mailer"));
 });
 
 gulp.task("html", function () {
@@ -71,7 +72,7 @@ gulp.task("fonts", function () {
 gulp.task("icons", function () {
   return gulp
     .src("src/icons/**/*")
-    .pipe(image())  ///
+    .pipe(image()) ///
     .pipe(gulp.dest("dist/icons"))
     .pipe(browserSync.stream());
 });
@@ -92,6 +93,13 @@ gulp.task("cwebp", function () {
     .pipe(browserSync.stream());
 });
 
+gulp.task("mailer", function () {
+  return gulp
+    .src("src/mailer/**/*")
+    .pipe(gulp.dest("dist/mailer"))
+    .pipe(browserSync.stream());
+});
+
 gulp.task(
   "default",
   gulp.parallel(
@@ -103,6 +111,7 @@ gulp.task(
     "icons",
     "html",
     "images",
-    "cwebp"
+    "cwebp",
+    "mailer"
   )
 );

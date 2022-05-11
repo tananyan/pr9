@@ -99,6 +99,8 @@ $("form").submit(function (e) {
     $(".form-thanks").fadeIn("fast");
 
     $("form").trigger("reset");
+
+    $(".form-thanks").delay(3000).fadeOut("slow");
   });
   return false;
 });
